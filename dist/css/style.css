@@ -399,6 +399,12 @@ h6 {
   margin-bottom: 8.3125rem;
 }
 
+.body__link:active {
+  -webkit-transform: translateY(0.25em);
+      -ms-transform: translateY(0.25em);
+          transform: translateY(0.25em);
+}
+
 .link-no {
   color: #7b1fa2;
   background-color: #fff;
@@ -410,33 +416,15 @@ h6 {
   background-color: #7b1fa2;
 }
 
-.link-no:active {
-  -webkit-transform: translateY(0.25em);
-      -ms-transform: translateY(0.25em);
-          transform: translateY(0.25em);
-}
-
-.questions,
-.body__internet,
-.body__old,
-.congratulations {
+.page__body:not(.questions) {
   display: none;
 }
 
-.questions,
-.body__internet:target,
-.body__old:target,
-.congratulations:target {
+.page__body.active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-
-/* Стилі для блока questions, який не є цільовим */
-
-/* Стилі, що застосовуються до блока internet, коли він є цільовим */
-
-/* Стилі, що застосовуються до блока questions, коли він є цільовим */
 
 @media (min-width: 69.375em) {
   .header__container {

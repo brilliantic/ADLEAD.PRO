@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20231126131253">
+	<link rel="stylesheet" href="css/style.min.css?_v=20231126215358">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,25 +36,20 @@
 							regalo!
 						</p>
 					</div>
-					<div class="body__button">
+					<div class="body__button" onclick="showNextBlock('internet')">
 						<a href="#internet" class="body__link">
 							<span>Iniciar LA ENCUESTA</span>
 						</a>
 					</div>
 				</div>
-				<div class="body__internet page__body body" id="internet">
-					<div class="body__clock body__clock--internet" id="clock">
-						<span>00</span>
-						:
-						<span>04</span>
-						:
-						<span>45</span>
+				<div class="internet page__body body" id="internet">
+					<div class="body__clock body__clock--internet timer1" id="timer1" data-timer1 data-end=" Nov 27, 2023 00:04:45"><span></span>
 					</div>
 					<div class="body__text body__text--internet">
 						¿Utiliza Internet a menudo?
 					</div>
 					<div class="body__button button">
-						<a href="#old" class="body__link link-si">
+						<a href="#old" class="body__link link-si" onclick="showNextBlock('old')">
 							<span>sí</span>
 						</a>
 						<a href="#questions" class="body__link link-no">
@@ -62,19 +57,14 @@
 						</a>
 					</div>
 				</div>
-				<div class="body__old page__body body" id="old">
-					<div class="body__clock body__clock--old" id="clock">
-						<span>00</span>
-						:
-						<span>03</span>
-						:
-						<span>25</span>
+				<div class="old page__body body" id="old">
+					<div class="body__clock body__clock--internet timer2" id="timer2" data-timer2 data-end=" Nov 27, 2023 00:03:35">
 					</div>
 					<div class="body__text body__text--old">
 						¿Tienes más de 18 años?
 					</div>
 					<div class="body__button button">
-						<a href="#congratulations" class="body__link link-si">
+						<a href="#congratulations" class="body__link link-si" onclick="showNextBlock('congratulations')">
 							<span>sí</span>
 						</a>
 						<a href="#questions" class="body__link link-no">
@@ -83,13 +73,9 @@
 					</div>
 				</div>
 				<div class="congratulations page__body body" id="congratulations">
-					<h2 class="body__title">
-						Enhorabuena!
-					</h2>
+					<h2 class="body__title">Enhorabuena!</h2>
 					<div class="body__text">
-						<p>
-							Sus 100GB gratuitos le esperan!
-						</p>
+						<p>Sus 100GB gratuitos le esperan!</p>
 					</div>
 					<div class="body__button">
 						<a href="#" class="body__link">
@@ -104,7 +90,7 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20231126131253"></script>
+	<script src="js/app.min.js?_v=20231126215358"></script>
 </body>
 
 </html>
