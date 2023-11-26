@@ -383,7 +383,7 @@ h6 {
   margin-bottom: 2.0625rem;
 }
 
-.body__clock span {
+.body__clock .timer-component {
   min-width: 4rem;
   border-radius: 0.625rem;
   padding: 0.625rem 0.75rem;
@@ -507,7 +507,7 @@ h6 {
     font-size: 1.875rem;
   }
 
-  .body__clock span {
+  .body__clock .timer-component {
     font-size: 2.5rem;
   }
 
@@ -624,7 +624,7 @@ h6 {
     font-size: 1rem;
   }
 
-  .body__clock span {
+  .body__clock .timer-component {
     font-size: 1.25rem;
   }
 
@@ -879,13 +879,13 @@ h6 {
 }
 
 @supports (font-size: clamp( 1.25rem , 0.65rem  +  2.6666666667vw , 2.5rem )) {
-    .body__clock span {
+    .body__clock .timer-component {
       font-size: clamp( 1.25rem , 0.65rem  +  2.6666666667vw , 2.5rem );
     }
 }
 
 @supports not (font-size: clamp( 1.25rem , 0.65rem  +  2.6666666667vw , 2.5rem )) {
-    .body__clock span {
+    .body__clock .timer-component {
       font-size: calc(1.25rem + 1.25 * (100vw - 22.5rem) / 46.875);
     }
 }

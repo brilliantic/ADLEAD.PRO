@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20231126215358">
+	<link rel="stylesheet" href="css/style.min.css?_v=20231126221431">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -43,7 +43,12 @@
 					</div>
 				</div>
 				<div class="internet page__body body" id="internet">
-					<div class="body__clock body__clock--internet timer1" id="timer1" data-timer1 data-end=" Nov 27, 2023 00:04:45"><span></span>
+					<div class="body__clock body__clock--internet timer" id="timer1" data-timer data-end="Nov 27, 2023 00:04:45">
+						<span class="timer-component" id="hours1"></span>
+						<span class="timer-separator">:</span>
+						<span class="timer-component" id="minutes1"></span>
+						<span class="timer-separator">:</span>
+						<span class="timer-component" id="seconds1"></span>
 					</div>
 					<div class="body__text body__text--internet">
 						¿Utiliza Internet a menudo?
@@ -58,7 +63,12 @@
 					</div>
 				</div>
 				<div class="old page__body body" id="old">
-					<div class="body__clock body__clock--internet timer2" id="timer2" data-timer2 data-end=" Nov 27, 2023 00:03:35">
+					<div class="body__clock body__clock--internet timer" id="timer2" data-timer data-end="Nov 27, 2023 00:04:45">
+						<span class="timer-component" id="hours2"></span>
+						<span class="timer-separator">:</span>
+						<span class="timer-component" id="minutes2"></span>
+						<span class="timer-separator">:</span>
+						<span class="timer-component" id="seconds2"></span>
 					</div>
 					<div class="body__text body__text--old">
 						¿Tienes más de 18 años?
@@ -90,7 +100,7 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20231126215358"></script>
+	<script src="js/app.min.js?_v=20231126221431"></script>
 </body>
 
 </html>

@@ -34,36 +34,32 @@
             }
         }
     };
-    function updateTimer(timerId, minutes, seconds) {
+    function updateTimer(timerId, hoursId, minutesId, secondsId, minutes, seconds) {
         const timerElement = document.querySelector(`#${timerId}`);
         if (timerElement) {
             const now = new Date;
             const endTime = new Date(now.getTime() + minutes * 60 * 1e3 + seconds * 1e3);
-            const formattedEndTime = endTime.toLocaleString("en", {
-                month: "short",
-                day: "numeric",
-                year: "numeric",
-                hour: "2-digit",
-                minute: "2-digit",
-                second: "2-digit"
-            });
-            timerElement.dataset.end = formattedEndTime;
             const timerInterval = setInterval((() => {
                 const currentTime = new Date;
                 const timeRemaining = endTime - currentTime;
                 if (timeRemaining > 0) {
+                    const hours = Math.floor(timeRemaining % (1e3 * 60 * 60 * 24) / (1e3 * 60 * 60));
                     const minutes = Math.floor(timeRemaining % (1e3 * 60 * 60) / (1e3 * 60));
                     const seconds = Math.floor(timeRemaining % (1e3 * 60) / 1e3);
-                    timerElement.textContent = `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
+                    document.getElementById(hoursId).textContent = hours < 10 ? `0${hours}` : hours;
+                    document.getElementById(minutesId).textContent = minutes < 10 ? `0${minutes}` : minutes;
+                    document.getElementById(secondsId).textContent = seconds < 10 ? `0${seconds}` : seconds;
                 } else {
                     clearInterval(timerInterval);
-                    timerElement.textContent = "Таймер завершено!";
+                    document.getElementById(hoursId).textContent = "00";
+                    document.getElementById(minutesId).textContent = "00";
+                    document.getElementById(secondsId).textContent = "00";
                 }
             }), 1e3);
         }
     }
-    updateTimer("timer1", 4, 45);
-    updateTimer("timer2", 3, 35);
+    updateTimer("timer1", "hours1", "minutes1", "seconds1", 4, 45);
+    updateTimer("timer2", "hours2", "minutes2", "seconds2", 3, 25);
     window["FLS"] = true;
     isWebp();
 })();
